@@ -22,7 +22,14 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.list_view);
 
         final ArrayList<String> lista_frutinhas = new ArrayList<>();
-        lista_frutinhas.add("botao");
+        lista_frutinhas.add("button");
+        lista_frutinhas.add("radio_button");
+        lista_frutinhas.add("image_button");
+        lista_frutinhas.add("checkbox");
+        lista_frutinhas.add("ratingbar");
+        lista_frutinhas.add("togglebutton");
+        lista_frutinhas.add("datepicker");
+        lista_frutinhas.add("alertdialog");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 getApplicationContext(),
