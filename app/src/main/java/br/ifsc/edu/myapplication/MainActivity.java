@@ -22,10 +22,8 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.list_view);
 
         final ArrayList<String> lista_frutinhas = new ArrayList<>();
-        lista_frutinhas.add("maça");
-        lista_frutinhas.add("goiaba");
-        lista_frutinhas.add("melancia");
-        lista_frutinhas.add("uva");
+        lista_frutinhas.add("botao");
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 getApplicationContext(),
                 android.R.layout.simple_list_item_1,
@@ -38,9 +36,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(MainActivity.this,lista_frutinhas.get(position), Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this,lista_frutinhas.get(position), Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(MainActivity.this, ComponenteView.class);
+
+                intent.putExtra("componente",lista_frutinhas.get(position));
+
                 startActivity(intent);
             }
         });
